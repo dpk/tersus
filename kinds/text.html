@@ -1,0 +1,9 @@
+{% extends "post.html" %}
+
+{% block content %}
+
+			<h2><a href="$post.permalink" rel="bookmark" title="Permanent Link to $post.title">$post.title</a></h2>
+			<p>${ post.time | date('F jS, Y') } <!-- by $post.author.name --></p>
+			$post.content
+			
+{% endblock %}

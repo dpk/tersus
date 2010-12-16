@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block content %}
+{% if posts %}
+{% for post in posts %}
+{% include "kinds/" ~ post.kind ~ ".html" %}
+{% endfor %}
+{% else %}
+
+	<h2>Not Found</h2>
+	<p>Sorry, but you are looking for something that isn’t here.</p>
+
+{% endif %}
+{% endblock %}
